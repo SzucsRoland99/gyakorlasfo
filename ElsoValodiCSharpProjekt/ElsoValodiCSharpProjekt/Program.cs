@@ -139,26 +139,26 @@ namespace ElsoValodiCharpProjekt
             }*/
 
             //15. feladat:
-            Console.WriteLine("Kérem a pozitiv egész szmáot: ");
-            int bemenoSzam = Int32.Parse(Console.ReadLine());
-            /* string kiiratas = "";
-             for (int i = 1; i < bemenoSzam; i++)
-             {
-                 kiiratas += i + " ";
-             }
-             Console.WriteLine(kiiratas);*/
+            /* Console.WriteLine("Kérem a pozitiv egész szmáot: ");
+             int bemenoSzam = Int32.Parse(Console.ReadLine());
+             /* string kiiratas = "";
+              for (int i = 1; i < bemenoSzam; i++)
+              {
+                  kiiratas += i + " ";
+              }
+              Console.WriteLine(kiiratas);*/
 
             /* for (int i = 1; i < bemenoSzam; i++)
              {
                  Console.Write(i + " ");
              }*/
-            int i = 1;
-            /* előltesztelő ciklus
-            while (i<bemenoSzam)
-            {
-                Console.Write(i++ + " ");
-                //i = i + 1;
-            }*/
+            /* int i = 1;
+             /* előltesztelő ciklus
+             while (i<bemenoSzam)
+             {
+                 Console.Write(i++ + " ");
+                 //i = i + 1;
+             }*/
 
             /* hátultesztelő ciklus
             do
@@ -166,7 +166,162 @@ namespace ElsoValodiCharpProjekt
                 Console.Write(i++ + " ");
             } while (i<bemenoSzam);*/
 
+
+            //16. feladat:
+            /* Console.WriteLine("Kérem a pozitiv egész szmáot: ");
+             int bemenoSzam = Int32.Parse(Console.ReadLine());
+             string kiiratas = "";
+
+              for (int i = 1; i < bemenoSzam; i++)
+              {
+                  kiiratas += i + " ";
+              }
+              Console.WriteLine(kiiratas);
+
+             /* for (int i = 1; i < bemenoSzam; i++)
+              {
+                  Console.Write(i + " ");
+              }*/
+            /* int i = 1;
+             /* előltesztelő ciklus
+             while (i<bemenoSzam)
+             {
+                 Console.Write(i++ + " ");
+                 //i = i + 1;
+             }*/
+
+            /* hátultesztelő ciklus
+            do
+            {
+                Console.Write(i++ + " ");
+            } while (i<bemenoSzam);*/
+
+            // 17.feladat:
+            /* Console.WriteLine("Kérem a pozitiv egész szmáot: ");
+             int bemenoSzam = Int32.Parse(Console.ReadLine());
+
+             Console.WriteLine($"{bemenoSzam} egész osztói: ");
+             for (int i = 1; i <= bemenoSzam; i++)
+             {
+                if(bemenoSzam % i==0)
+                 {
+                     Console.WriteLine(i);
+                 }
+
+             }
+             Console.WriteLine();*/
+
+            // Plusz feladat: pozitív szám prím e ?
+            /* Console.WriteLine("Kérem a pozitiv egész szmáot: ");
+             int bemenoSzam = Int32.Parse(Console.ReadLine());
+
+             int szamlalo = 0;
+             int osztokOsszege = 0;
+
+             for (int i = 1; i < bemenoSzam; i++)
+             {
+                 if(bemenoSzam % i == 0)
+                 {
+                     szamlalo++;
+                     osztokOsszege += i;
+                 }
+             }
+             if (szamlalo == 2) {
+                 Console.WriteLine($"A bemenő szám {bemenoSzam} prim");
+                 Console.WriteLine($"A bemenő szám {bemenoSzam}osztóinak összege: {osztokOsszege}.");
+
+             }
+             else
+             {
+                 Console.WriteLine($"A bemenő szám {bemenoSzam}nem prim");
+                 Console.WriteLine($"A bemenő szám {bemenoSzam}osztóinak összege: {osztokOsszege}.");
+
+             }*/
+            //19. feladat:
+            /*Console.WriteLine("Kérem a pozitiv egész szmáot: ");
+            int bemenoSzam = Int32.Parse(Console.ReadLine());
+            int osztokOsszege = 0;
+            int i = 1;
+
+            while (i <= bemenoSzam)
+            {
+                if (bemenoSzam % i ==)
+                {
+                    osztokOsszege += i;
+                }
+                i++;
+            }
+            if (2*osztokOsszege== 2*bemenoSzam)
+            {
+                Console.WriteLine($"a szám {bemenoSzam} tökéletes szám");
+            }
+
+            else
+            {
+                Console.WriteLine($"a szám {bemenoSzam} nem tökéletes szám");
+            }*/
+
+            //20.feladat:
+            /* int alap = -1;
+             int kitevo = -1;
+             while (alap<=0 || alap>= 10)
+             {
+                 Console.WriteLine("Kérem az alapot: ");
+                 alap = Int32.Parse(Console.ReadLine());
+
+             }
+
+             Console.WriteLine("Kérem a kitevőt: ");
+             int kitevo = Int32.Parse(Console.ReadLine());
+             int hatvany = 1;
+             for (int i = 0; i < kitevo; i++)
+             {
+                 hatvany *= alap;
+             }
+             Console.Write($"a hatvány: {hatvany}");*/
+
+            //21. feladat:
+            int szam = 0;
+
+            while (szam <=0)
+            {
+                Console.WriteLine("Kérek egy pozitiv egész számot: ");
+                szam = Convert.ToInt32(Console.ReadLine());
+
+              
+            }
+            // Plusz feladat prím számra lépjen ki a ciklusból
+            int szam = 3;
+            while (primszamE(szam))
+            {
+                Console.Write("kérek egy nem prim számot :");
+                szam = Convert.ToInt32(Console.ReadLine());
+            }
+
+
             Console.ReadKey(true);
         }
+        static bool primszamE(int szam)
+        {
+            bool teljesul = true;
+            int osztokSzama = 0;
+            for (int i = 1; i <= szam; i++)
+            {
+                if (szam % i == 0)
+                {
+
+                    osztokSzama++;
+                }
+            }
+            if (osztokSzama == 2)
+            {
+                return teljesul;
+
+            }
+            else
+            {
+                return !teljesul;
+            }
+        }
     }
-}
+}/*
